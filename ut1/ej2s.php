@@ -21,8 +21,8 @@ $n4 = decbin($num4);
 
 echo str_pad($n1,8,"0",STR_PAD_LEFT).".";
 echo str_pad($n2,8,"0",STR_PAD_LEFT).".";
-echo str_pad($n2,8,"0",STR_PAD_LEFT).".";
-echo str_pad($n2,8,"0",STR_PAD_LEFT);
+echo str_pad($n3,8,"0",STR_PAD_LEFT).".";
+echo str_pad($n4,8,"0",STR_PAD_LEFT);
 
 
 
