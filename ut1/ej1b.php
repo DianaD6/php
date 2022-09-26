@@ -3,7 +3,7 @@
 <BODY>
 <?php
 
-$num=168;
+$num=1;
 $dividendo = 2;
 $resultado = $num/$dividendo;
 $resto1=$num%$dividendo;
@@ -19,7 +19,7 @@ while($resultado >= $dividendo){
 	
 }
 
-if ($num != 1 && $base == 2) {
+if ($num != 1 && $dividendo == 2) {
 	
 	$binario = ((int)$resultado).strrev($cadena).$resto1;
 	$binario = str_pad($binario,8,"0",STR_PAD_LEFT);
