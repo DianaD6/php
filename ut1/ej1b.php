@@ -19,9 +19,10 @@ while($resultado >= $dividendo){
 	
 }
 
-if ($num != 1) {
+if ($num != 1 && $base == 2) {
 	
 	$binario = ((int)$resultado).strrev($cadena).$resto1;
+	$binario = str_pad($binario,8,"0",STR_PAD_LEFT);
 	echo "Numero $num en binario = ". $binario;
 	
 } else {
