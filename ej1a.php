@@ -1,37 +1,38 @@
+<!DOCTYPE html>
 <HTML>
-<HEAD><TITLE> EJ1B – Conversor decimal a binario</TITLE></HEAD>
+<HEAD><TITLE> Ejercicios arrays unidimensionales </TITLE></HEAD>
 <BODY>
 <?php
 
-$num=1;
-$dividendo = 2;
-$resultado = $num/$dividendo;
-$resto1=$num%$dividendo;
-$cadena="";
+$posicion = -1;
 
-while($resultado >= $dividendo){
+$suma = 0;
+
+echo "<table border='1'>";
+echo"	<tr>";
+echo"		<th>Indice</th>";
+echo"		<th>Valor</th>";
+echo"		<th>Suma</th>";
+echo"	</tr>";
+
+for($i=0; $posicion < 19; $i++){
+
+	$i++;
+
+	$posicion++;
+
+	$impar[$posicion] = $i;
 	
-	$resto2 = $resultado%$dividendo;
-
-	$resultado = $resultado/$dividendo;
-
-	$cadena .=$resto2;
+	$suma = $suma + $impar[$posicion];
+echo "<tr>";
+echo	"<td>$posicion</td>";
+echo	"<td>$i</td>";
+echo	"<td>$suma</td>";
+echo "</tr>";
 	
 }
 
-if ($num != 1 && $dividendo == 2) {
-	
-	$binario = ((int)$resultado).strrev($cadena).$resto1;
-	$binario = str_pad($binario,8,"0",STR_PAD_LEFT);
-	echo "Numero $num en binario = ". $binario;
-	
-} else {
-	
-	$binario = strrev($cadena).$resto1;
-	echo "Numero $num en binario = ". $binario;
-	
-}
-
+echo"</table>";
 ?>
 </BODY>
 </HTML>
