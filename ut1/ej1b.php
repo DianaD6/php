@@ -35,3 +35,35 @@ if ($num != 1 && $dividendo == 2) {
 ?>
 </BODY>
 </HTML>
+
+
+v2.0
+<HTML>
+<HEAD><TITLE> EJ1B – Conversor decimal a binario</TITLE></HEAD>
+<BODY>
+<?php
+
+$num=168;
+$dividendo = 2;
+$resultado = $num;
+$binario = " ";
+
+while($resultado >= $dividendo){
+	
+	$resto = $resultado%$dividendo;
+	$resultado = $resultado/$dividendo;
+	
+	$binario.= $resto;
+	#echo $resto."</br>";
+	#echo $resultado."</br>";
+	
+}
+$resultado = ((int)$resultado);
+#echo $binario;
+
+echo "Numero $num en binario = ".$resultado.strrev($binario);
+
+?>
+</BODY>
+</HTML>
+
