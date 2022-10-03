@@ -1,7 +1,7 @@
 <HTML>
 
 <HEAD>
-    <TITLE> Ejercicios Arrays Unidimensionales</TITLE>
+    <TITLE> Ejercicios Arrays Multidimensionales</TITLE>
 </HEAD>
 
 <BODY>
@@ -47,9 +47,6 @@
         }
         echo "</tr>";
     }
-
-
-    var_dump($matriz);
     ?>
 </BODY>
 
