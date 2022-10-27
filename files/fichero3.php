@@ -13,6 +13,49 @@
     echo "<table border='1'>";
     while (!feof($fp)){
         $linea = fgets($fp);
+       
+        $nombre = substr($linea, 0, 39 );
+        $apellido1 = substr($linea, 38, 40);
+        $apellido2 = substr($linea, 79, 41);
+        $fechaNacimiento = substr($linea, 120, 10);
+        $localidad = substr($linea, 130);
+        
+        echo "<tr>";
+        echo  "<td>$nombre</td>";
+        echo  "<td>$apellido1</td>";
+        echo  "<td>$apellido2</td>";
+        echo  "<td>$fechaNacimiento</td>";
+        echo  "<td>$localidad</td>";
+        echo "</tr>";
+
+        $cont++;
+    }
+    echo "</table>";
+    echo ($cont - 1) . " filas";
+
+    ?>
+</body>
+
+</html>
+
+
+
+/*
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Alumno</title>
+</head>
+
+<body>
+    <?php
+
+    $fp = fopen("alumnos1.txt", "r");
+    $cont = 0;
+    echo "<table border='1'>";
+    while (!feof($fp)){
+        $linea = fgets($fp);
         $snombre = strpos($linea, " ", 0);
         $nombre = substr($linea, 0, $snombre);
 
@@ -50,7 +93,7 @@
 </body>
 
 </html>
-
+*/
 
 
 
